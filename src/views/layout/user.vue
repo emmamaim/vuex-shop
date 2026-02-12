@@ -151,7 +151,7 @@ export default {
 
 .head-page {
   height: 130px;
-  background: url("http://cba.itlike.com/public/mweb/static/background/user-header2.png");
+  background: url("https://cba.itlike.com/public/mweb/static/background/user-header2.png");
   background-size: cover;
   display: flex;
   align-items: center;

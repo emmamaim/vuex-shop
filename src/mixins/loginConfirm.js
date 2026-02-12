@@ -28,36 +28,5 @@ export default {
         return true
       } return false
     }
-    // 測試專用（因爲後端資料獲取需要token才能進行）
-    // loginConfirm () {
-    //   // --- 測試開關：手動改為 true 即可強制攔截 ---
-    //   const FORCE_NO_TOKEN = true
-    //   // 判斷條件：(測試模式開啟) 或者 (Vuex 裡沒有 token)
-    //   if (FORCE_NO_TOKEN || !this.$store.getters.token) {
-    //     this.$dialog.confirm({
-    //       title: '溫馨提示',
-    //       message: '此時需要先登入才能操作哦',
-    //       confirmButtonText: '去登入',
-    //       cancelButtonText: '再逛逛'
-    //     })
-    //       .then(() => {
-    //         // 用戶點擊「去登入」
-    //         this.$router.replace({
-    //           path: '/login',
-    //           query: {
-    //             backUrl: this.$route.fullPath
-    //           }
-    //         })
-    //       })
-    //       .catch(() => {
-    //         // 用戶點擊「再逛逛」，通常這裡不需額外處理
-    //       })
-
-    //     // 【關鍵】立即返回 true，告訴調用者「這次操作被攔截了」
-    //     return true
-    //   }
-    //   // 有 token 且非測試狀態，返回 false
-    //   return false
-    // }
   }
 }

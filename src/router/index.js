@@ -1,14 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Login from '@/views/login'
 import Layout from '@/views/layout'
-import Search from '@/views/search'
-import SearchList from '@/views/search/list'
-import ProDetail from '@/views/prodetail'
-import Pay from '@/views/pay'
-import MyOrder from '@/views/myorder'
-
 import store from '@/store'
 
 // 二級路由
@@ -16,6 +9,14 @@ import Category from '@/views/layout/category.vue'
 import Cart from '@/views/layout/cart.vue'
 import User from '@/views/layout/user.vue'
 import Home from '@/views/layout/home.vue'
+
+// 路由懶加載
+const Login = () => import('@/views/login')
+const Search = () => import('@/views/search')
+const SearchList = () => import('@/views/search/list')
+const ProDetail = () => import('@/views/prodetail')
+const Pay = () => import('@/views/pay')
+const MyOrder = () => import('@/views/myorder')
 
 Vue.use(VueRouter)
 
@@ -76,6 +77,7 @@ router.beforeEach((to, from, next) => {
   // 第二步：非權限頁面直接放行
   if (!authUrls.includes(to.path)) {
     next()
+    return
   }
 
   // 第三步：權限頁面通過token判斷是否放行
@@ -83,7 +85,7 @@ router.beforeEach((to, from, next) => {
   if (token) {
     next()
   } else {
-    next('login')
+    next('/login')
   }
 })
 
