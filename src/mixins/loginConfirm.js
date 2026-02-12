@@ -7,13 +7,13 @@ export default {
     }
   },
   methods: {
-    // 封裝未登錄彈窗的方法 判斷token
+    // 封裝未登入彈窗的方法 判斷token
     loginConfirm () {
       if (!this.$store.getters.token) {
         this.$dialog.confirm({
           title: '溫馨提示',
-          message: '此時需要先登陸才能操作哦',
-          confirmButtonText: '去登錄',
+          message: '此時需要先登入才能操作哦',
+          confirmButtonText: '去登入',
           cancelButtonText: '再逛逛'
         })
           .then(() => {
@@ -36,12 +36,12 @@ export default {
     //   if (FORCE_NO_TOKEN || !this.$store.getters.token) {
     //     this.$dialog.confirm({
     //       title: '溫馨提示',
-    //       message: '此時需要先登錄才能操作哦',
-    //       confirmButtonText: '去登錄',
+    //       message: '此時需要先登入才能操作哦',
+    //       confirmButtonText: '去登入',
     //       cancelButtonText: '再逛逛'
     //     })
     //       .then(() => {
-    //         // 用戶點擊「去登錄」
+    //         // 用戶點擊「去登入」
     //         this.$router.replace({
     //           path: '/login',
     //           query: {

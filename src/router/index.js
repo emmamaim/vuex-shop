@@ -69,7 +69,7 @@ const router = new VueRouter({
 })
 
 // 路由守衛(全局前置)
-// 核心邏輯：1.游客需登錄才能訪問 pay / myorder 2.游客和用戶的區別：登錄權證 token
+// 核心邏輯：1.游客需登入才能訪問 pay / myorder 2.游客和用戶的區別：登入權證 token
 // 第一步：定義一個數組 專門儲存需要權限才能訪問的頁面
 const authUrls = ['/pay', '/myorder']
 router.beforeEach((to, from, next) => {

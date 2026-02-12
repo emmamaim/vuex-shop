@@ -74,7 +74,7 @@ export default {
     }
   },
   created () {
-    // 必須登錄過的用戶才能獲取購物車列表
+    // 必須登入的用戶才能獲取購物車列表
     if (this.isLogin) {
       this.$store.dispatch('cart/getCartAction')
     }

@@ -1,12 +1,12 @@
 <template>
   <div class="login">
     <!-- navbar -->
-    <van-nav-bar title="會員登錄" left-arrow @click-left="$router.go(-1)"/>
+    <van-nav-bar title="會員登入" left-arrow @click-left="$router.go(-1)"/>
 
     <div class="container">
       <div class="title">
-        <h3>手機號登錄</h3>
-        <p>未注冊的手機號登錄后將自動注冊</p>
+        <h3>手機號登入</h3>
+        <p>未注冊的手機號登入后將自動注冊</p>
       </div>
 
       <div class="form">
@@ -23,7 +23,7 @@
         </div>
       </div>
 
-      <div class="login-btn" @click="login">登錄</div>
+      <div class="login-btn" @click="login">登入</div>
     </div>
   </div>
 </template>
@@ -51,7 +51,7 @@ export default {
       second: 60,
       time: null,
       mobile: '',
-      // 登錄(短信驗證碼)
+      // 登入(短信驗證碼)
       msgCode: ''
     }
   },
@@ -99,7 +99,7 @@ export default {
         }, 1000)
       }
     },
-    // 登錄
+    // 登入
     async login () {
       if (!this.validFn()) {
         return
@@ -112,9 +112,9 @@ export default {
       const res = await codeLogin(this.mobile, this.msgCode)
       this.$store.commit('user/setUserInfo', res.data)
       console.log(res)
-      this.$toast('登錄成功！')
+      this.$toast('登入成功！')
 
-      // 其他頁面攔截回登錄頁，登錄後跳轉回
+      // 其他頁面攔截回登入頁，登入後跳轉回
       const url = this.$route.query.backUrl || '/'
       this.$router.replace(url)
     }

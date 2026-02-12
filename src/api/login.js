@@ -1,4 +1,4 @@
-// 所有登錄相關的接口請求
+// 所有登入相關的接口請求
 import request from '@/utils/request'
 
 // 1.獲取圖形驗證碼
@@ -17,7 +17,7 @@ export const getMsgCode = (capchaCode, capchaKey, mobile) => {
   })
 }
 
-// 3.登錄接口
+// 3.登入接口
 export const codeLogin = (mobile, smsCode) => {
   return request.post('/passport/login', {
     form: {

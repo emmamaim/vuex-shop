@@ -183,7 +183,7 @@ export default {
     },
     // 立刻購買 -> 跳轉結算畫面
     goBuyNow () {
-      // 判斷登錄token -> 未登錄彈出確認框
+      // 判斷登入token -> 未登入彈出確認框
       if (this.loginConfirm()) {
         return
       }

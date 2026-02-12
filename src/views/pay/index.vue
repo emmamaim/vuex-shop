@@ -120,7 +120,7 @@ export default {
     // 地址整合
     longAddress () {
       const region = this.selectAddress.region
-      return region.province + region.city + region.region + this.selectedAddress.detail
+      return region.province + region.city + region.region + this.selectAddress.detail
     },
     // 接收$route.query參數：mode / cartIds / goodsId / goodsNum / goodsSkuId
     mode () {
@@ -139,7 +139,7 @@ export default {
       return this.$route.query.goodsSkuId
     }
   },
-  created () {
+  async created () {
     this.getAddressList()
     this.getOrderList()
   },
