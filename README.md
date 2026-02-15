@@ -10,6 +10,9 @@ Test Account: 18999292929
 verification code: 246810
 ```
 
+```
+項目API由《黑马程序员前端》提供：https://s.apifox.cn/12ab6b18-adc2-444c-ad11-0e60f5693f66/doc-2221080
+```
 （如 API 停用或資料為空，可能為測試環境限制）
 
 ## Tech Stack 技術棧
