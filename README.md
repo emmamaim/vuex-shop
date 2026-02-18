@@ -7,7 +7,7 @@ https://emmamaim.github.io/vuex-shop/
 ```
 Test Account: 18999292929 
 
-verification code: 246810
+Verification Code: 246810
 ```
 
 ```
